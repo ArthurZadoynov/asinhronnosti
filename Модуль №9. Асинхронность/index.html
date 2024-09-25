@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <form>
+        <label for="title">Название товара:</label>
+        <input type="text" id="title" name="title">
+
+        <label for="price">Цена:</label>
+        <input type="number" id="price" name="price">
+
+        <label for="description">Описание:</label>
+        <textarea id="description" name="description"></textarea>
+
+        <label for="category">Категория:</label>
+        <input type="text" id="category" name="category">
+
+        <button id="addBtn" class="addBtn">Добавить товар</button>
+      </form>
+      <div class="text">
+        <h3>Описание работы магазина</h3>
+        <p>Мы получаем данные с сервара через запрос GET</p>
+        <p>При нажатии на крестик на карточке товара - происходит запрос DELETE. API, которым мы пользуемся не дает
+          вносить изменения в базе данных, поэтому мы просто увидим результат в console и в Network </p>
+        <p>При нажатии на кнопку Добавить товар - товар тоже добавлен не будет, но мы сможем увидеть наш запрос в
+          network</p>
+      </div>
+    </div>
+    <h1>Shop</h1>
+    <div class="filters"> 
+      <div class="category">
+        <label for="category-select">Выбор категории:</label>
+        <select id="category-select">
+        </select>
+        <button id="filter-btn">Подтвердить</button>
+      </div>
+     
+    </div>
+    <div id="productList"> </div>
+    <div id="styleLimitbtn">
+      <button class="learn-more" id="limit-btn">Загрузить еще</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
