@@ -135,13 +135,21 @@ async function deleteFunction() {
   })
     .then(res => res.json())
     .then(json => console.log(json))
+    alert('Товар удален');
   } catch (err) {
     console.error('Произошла ошибка при удалении товара:', err);
   }
 };
 
-const addBtn = document.querySelector('#addBtn');
-addBtn.addEventListener('click', addBtnFunc);
+const formAddCard = document.querySelector('.formAddCard')
+// const addBtn = document.querySelector('#addBtn');
+formAddCard.addEventListener('submit', (event) => {
+  addBtnFunc ();
+  event.preventDefault()
+  event.target.reset();
+});
+
+
 
 async function addBtnFunc() {
   try {
@@ -158,6 +166,7 @@ async function addBtnFunc() {
   })
     .then(res => res.json())
     .then(json => console.log(json))
+    alert('Товар успешно добавлен');
   } catch(err) {
     console.error('Произошла ошибка при добавлении товара:', err);
   }
